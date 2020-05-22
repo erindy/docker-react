@@ -1,0 +1,9 @@
+npm run start // Starts up a development server. For development use only
+npm run test // Runs test associated with the project
+npm run build // Builds a production version of the application
+
+
+
+docker build -f Dockerfile.dev .
+
+ docker run -p 8080:80 c07e7f209d22 // starting nginx
