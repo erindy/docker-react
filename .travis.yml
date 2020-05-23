@@ -3,11 +3,12 @@ services:
   - docker
 
 before_install:
-  # - docker build -t erindmehmeti/docker-react .
+  - docker build -t erindmehmeti/docker-react-prod .
   - docker build -t erindmehmeti/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true erindmehmeti/docker-react npm run test -- --coverage
+  - docker run -e CI=true erindmehmeti/docker-react-prod
 
 deploy:
   provider: elasticbeanstalk
