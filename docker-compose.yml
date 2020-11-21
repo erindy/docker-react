@@ -18,4 +18,5 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
+      
     command: ["npm", "run", "test"] # override the cmd command in dockerfile
